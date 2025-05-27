@@ -11,15 +11,18 @@ export default function IntroEditorial() {
   const homeContent = content.en.home
 
   return (
-    <section ref={ref} className="py-24 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={ref} className="py-24 bg-white relative overflow-hidden">
+      {/* Elegant Frame Element */}
+      <div className="absolute top-20 right-8 w-32 h-48 border-2 border-accent/20 rounded-elegant rotate-12 hidden lg:block"></div>
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center"
         >
-          <p className="text-lg md:text-xl leading-relaxed font-light text-gray-800 tracking-wide">
+          <p className="text-lg md:text-xl leading-relaxed font-light text-foreground tracking-wide">
             {homeContent.editorialText}
           </p>
         </motion.div>
@@ -36,12 +39,12 @@ export default function IntroEditorial() {
 
         {/* Quote or highlight */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 1, delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <blockquote className="text-2xl md:text-3xl font-thin text-primary italic">
+          <blockquote className="text-2xl md:text-3xl font-light text-primary italic">
             &ldquo;Always on time. Always tailored. Always exquisite.&rdquo;
           </blockquote>
         </motion.div>

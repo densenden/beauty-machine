@@ -11,15 +11,18 @@ export default function CityContext() {
   const cityContent = content.en.home.cityContext
 
   return (
-    <section ref={ref} className="py-24 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={ref} className="py-24 bg-gray-50 relative overflow-hidden">
+      {/* Elegant Frame Element */}
+      <div className="absolute bottom-16 left-8 w-24 h-40 border-2 border-primary/15 rounded-elegant -rotate-6 hidden lg:block"></div>
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-thin text-primary mb-6">
+          <h2 className="text-4xl md:text-5xl font-light text-primary mb-6">
             {cityContent.title}
           </h2>
         </motion.div>
@@ -28,14 +31,14 @@ export default function CityContext() {
           {cityContent.points.map((point, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+              initial={{ opacity: 0, y: 15 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="bg-white rounded-elegant p-6 shadow-elegant hover:shadow-lg transition-all duration-300 group"
             >
               <div className="flex items-start space-x-4">
-                <div className="w-2 h-2 bg-accent rounded-full mt-3 flex-shrink-0"></div>
-                <p className="text-lg font-light text-gray-700 leading-relaxed">
+                <div className="w-2 h-2 bg-accent rounded-full mt-3 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
+                <p className="text-lg font-regular text-foreground leading-relaxed">
                   {point}
                 </p>
               </div>
@@ -44,8 +47,8 @@ export default function CityContext() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-center"
         >
@@ -56,16 +59,16 @@ export default function CityContext() {
 
         {/* Visual Enhancement */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 1.2, delay: 0.8 }}
           className="flex justify-center mt-12"
         >
           <div className="relative">
-            <div className="w-32 h-32 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full"></div>
-            <div className="absolute inset-4 bg-gradient-to-br from-accent to-primary rounded-full opacity-80"></div>
-            <div className="absolute inset-8 bg-white rounded-full flex items-center justify-center">
-              <span className="text-primary font-thin text-lg">FFM</span>
+            <div className="w-32 h-32 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full backdrop-blur-sm"></div>
+            <div className="absolute inset-4 bg-gradient-to-br from-accent/30 to-primary/30 rounded-full"></div>
+            <div className="absolute inset-8 bg-white rounded-full flex items-center justify-center shadow-elegant">
+              <span className="text-primary font-light text-lg">FFM</span>
             </div>
           </div>
         </motion.div>
