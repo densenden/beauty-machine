@@ -11,8 +11,10 @@ const config: Config = {
       colors: {
         primary: '#450014', // Dark Bordeaux
         'primary-light': '#6B0B2A', // Lighter bordeaux for better contrast
+        'primary-dark': '#2D000D', // Even darker bordeaux
         accent: '#FF4FB1',  // Elegant Pink
         'accent-light': '#FF7BC7', // Lighter pink
+        'accent-dark': '#E63A9A', // Darker pink
         background: '#FFFFFF',
         foreground: '#1A1A1A', // Darker text for better contrast
         'text-secondary': '#4A4A4A', // Better contrast for secondary text

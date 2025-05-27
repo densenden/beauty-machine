@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { content } from '@/lib/content'
 import { format, addDays } from 'date-fns'
+import BookingShowcase from '@/components/booking/BookingShowcase'
 
 export default function BookPage() {
   const [selectedPackage, setSelectedPackage] = useState<number>(1)
@@ -40,13 +41,17 @@ export default function BookPage() {
 
   return (
     <div className="pt-16 min-h-screen bg-gray-50">
+      <BookingShowcase />
       <div className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-thin text-primary mb-6">
+            <span className="inline-block px-6 py-3 bg-accent/10 text-accent font-lexend-giga text-sm font-medium rounded-elegant border border-accent/30 mb-8">
+              Book Your Session
+            </span>
+            <h1 className="text-5xl md:text-6xl font-lexend-giga font-light text-primary mb-6">
               {bookContent.title}
             </h1>
-            <p className="text-xl font-light text-gray-600">
+            <p className="text-xl font-lexend font-light text-gray-700">
               {bookContent.subtitle}
             </p>
           </div>

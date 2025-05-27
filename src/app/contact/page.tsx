@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline'
+import ContactShowcase from '@/components/contact/ContactShowcase'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -28,6 +29,7 @@ export default function ContactPage() {
 
   return (
     <div className="pt-16">
+      <ContactShowcase />
       <div className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -35,10 +37,13 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-light text-primary mb-6">
+            <span className="inline-block px-6 py-3 bg-accent/10 text-accent font-lexend-giga text-sm font-medium rounded-elegant border border-accent/30 mb-8">
+              Contact Us
+            </span>
+            <h1 className="text-5xl md:text-6xl font-lexend-giga font-light text-primary mb-6">
               Get in Touch
             </h1>
-            <p className="text-xl font-regular text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl font-lexend font-light text-gray-700 max-w-3xl mx-auto">
               Ready to experience luxury mobile makeup services? 
               Contact us to discuss your needs or book a consultation.
             </p>

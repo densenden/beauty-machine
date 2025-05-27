@@ -1,17 +1,22 @@
 import { content } from '@/lib/content'
+import AppShowcase from '@/components/app/AppShowcase'
 
 export default function AppPage() {
   const appContent = content.en.app
 
   return (
     <div className="pt-16">
+      <AppShowcase />
       <div className="py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100 min-h-screen">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-thin text-primary mb-6">
+            <span className="inline-block px-6 py-3 bg-accent/10 text-accent font-lexend-giga text-sm font-medium rounded-elegant border border-accent/30 mb-8">
+              AI Beauty Assistant
+            </span>
+            <h1 className="text-5xl md:text-6xl font-lexend-giga font-light text-primary mb-6">
               {appContent.title}
             </h1>
-            <p className="text-xl font-light text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl font-lexend font-light text-gray-700 max-w-3xl mx-auto">
               {appContent.desc}
             </p>
           </div>

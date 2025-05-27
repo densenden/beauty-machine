@@ -1,10 +1,12 @@
 import { content } from '@/lib/content'
+import AboutShowcase from '@/components/about/AboutShowcase'
 
 export default function AboutPage() {
   const aboutContent = content.en.about
 
   return (
     <div className="pt-16">
+      <AboutShowcase />
       <div className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
