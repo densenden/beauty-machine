@@ -28,7 +28,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="text-xl md:text-2xl font-light text-text-secondary mb-12 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl font-regular text-gray-700 mb-12 max-w-3xl mx-auto"
           >
             {homeContent.heroSubtitle}
           </motion.p>

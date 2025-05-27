@@ -24,11 +24,8 @@ export default function USPList() {
   ]
 
   return (
-    <section ref={ref} className="py-24 bg-white relative overflow-hidden">
-      {/* Elegant Frame Element */}
-      <div className="absolute top-16 right-16 w-24 h-36 border-2 border-primary/15 rounded-elegant rotate-12 hidden lg:block"></div>
-      
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section ref={ref} className="py-24 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -51,7 +48,7 @@ export default function USPList() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="flex items-start space-x-6 p-8 bg-gray-50 rounded-elegant hover:bg-gray-100 transition-colors duration-300 group"
+                className="flex items-start space-x-6 p-8 bg-gray-50 rounded-elegant hover:bg-gray-100 transition-colors duration-300 group border border-primary/10"
               >
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-accent/10 rounded-elegant flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
@@ -60,7 +57,7 @@ export default function USPList() {
                 </div>
                 
                 <div>
-                  <p className="text-lg font-regular text-foreground leading-relaxed">
+                  <p className="text-lg font-regular text-gray-800 leading-relaxed">
                     {usp}
                   </p>
                 </div>

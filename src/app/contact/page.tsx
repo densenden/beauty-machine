@@ -28,11 +28,8 @@ export default function ContactPage() {
 
   return (
     <div className="pt-16">
-      <div className="py-16 bg-gray-50 relative overflow-hidden">
-        {/* Elegant Frame Element */}
-        <div className="absolute top-12 right-12 w-28 h-44 border-2 border-primary/20 rounded-elegant rotate-12 hidden lg:block"></div>
-        
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,7 +38,7 @@ export default function ContactPage() {
             <h1 className="text-5xl md:text-6xl font-light text-primary mb-6">
               Get in Touch
             </h1>
-            <p className="text-xl font-light text-foreground max-w-3xl mx-auto">
+            <p className="text-xl font-regular text-gray-700 max-w-3xl mx-auto">
               Ready to experience luxury mobile makeup services? 
               Contact us to discuss your needs or book a consultation.
             </p>
@@ -69,7 +66,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-primary mb-1">Email</h3>
-                    <p className="text-foreground">hello@beautymachine-irl.com</p>
+                    <p className="text-gray-800">hello@beautymachine-irl.com</p>
                     <p className="text-text-secondary text-sm">We respond within 24 hours</p>
                   </div>
                 </div>
@@ -80,7 +77,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-primary mb-1">Phone</h3>
-                    <p className="text-foreground">+49 69 123 456 789</p>
+                    <p className="text-gray-800">+49 69 123 456 789</p>
                     <p className="text-text-secondary text-sm">Available Mon-Sat, 9 AM - 7 PM</p>
                   </div>
                 </div>
@@ -91,7 +88,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-primary mb-1">Service Area</h3>
-                    <p className="text-foreground">Frankfurt am Main</p>
+                    <p className="text-gray-800">Frankfurt am Main</p>
                     <p className="text-text-secondary text-sm">Mobile service throughout the city</p>
                   </div>
                 </div>
@@ -99,7 +96,7 @@ export default function ContactPage() {
 
               <div className="mt-12 p-6 bg-gray-50 rounded-elegant">
                 <h3 className="text-lg font-medium text-primary mb-3">Business Hours</h3>
-                <div className="space-y-2 text-foreground">
+                <div className="space-y-2 text-gray-800">
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
                     <span>9:00 AM - 8:00 PM</span>
@@ -138,7 +135,7 @@ export default function ContactPage() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-elegant focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors duration-300 text-foreground"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-elegant focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors duration-300 text-gray-800"
                     placeholder="Your full name"
                   />
                 </div>

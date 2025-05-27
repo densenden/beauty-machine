@@ -13,11 +13,8 @@ export default function PricingTable() {
   const prices = content.en.service.prices
 
   return (
-    <section ref={ref} className="py-24 bg-gray-50 relative overflow-hidden">
-      {/* Elegant Frame Element */}
-      <div className="absolute bottom-16 left-16 w-28 h-40 border-2 border-accent/15 rounded-elegant -rotate-6 hidden lg:block"></div>
-      
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section ref={ref} className="py-24 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -27,7 +24,7 @@ export default function PricingTable() {
           <h2 className="text-4xl md:text-5xl font-light text-primary mb-6">
             Choose Your Package
           </h2>
-          <p className="text-xl font-light text-foreground max-w-3xl mx-auto">
+          <p className="text-xl font-regular text-gray-800 max-w-3xl mx-auto">
             Professional makeup services with transparent pricing. 
             All packages include consultation and premium products.
           </p>
@@ -41,7 +38,7 @@ export default function PricingTable() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className={`bg-white rounded-elegant p-8 shadow-elegant hover:shadow-lg transition-all duration-300 ${
-                index === 1 ? 'ring-2 ring-accent scale-105' : ''
+                index === 1 ? 'ring-2 ring-accent scale-105' : 'border border-primary/10'
               }`}
             >
               {index === 1 && (
@@ -59,7 +56,7 @@ export default function PricingTable() {
                   {price.price}
                 </div>
                 
-                <p className="text-foreground font-light mb-8">
+                <p className="text-gray-700 font-regular mb-8">
                   {price.desc}
                 </p>
 
@@ -82,26 +79,26 @@ export default function PricingTable() {
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <CheckIcon className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="text-sm font-regular text-foreground">Professional consultation</span>
+                    <span className="text-sm font-regular text-gray-700">Professional consultation</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckIcon className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="text-sm font-regular text-foreground">Premium makeup products</span>
+                    <span className="text-sm font-regular text-gray-700">Premium makeup products</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckIcon className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="text-sm font-regular text-foreground">Mobile service in Frankfurt</span>
+                    <span className="text-sm font-regular text-gray-700">Mobile service in Frankfurt</span>
                   </div>
                   {index >= 1 && (
                     <div className="flex items-center space-x-3">
                       <CheckIcon className="w-5 h-5 text-accent flex-shrink-0" />
-                      <span className="text-sm font-regular text-foreground">Touch-up guidance</span>
+                      <span className="text-sm font-regular text-gray-700">Touch-up guidance</span>
                     </div>
                   )}
                   {index === 2 && (
                     <div className="flex items-center space-x-3">
                       <CheckIcon className="w-5 h-5 text-accent flex-shrink-0" />
-                      <span className="text-sm font-regular text-foreground">Photoshoot-ready finish</span>
+                      <span className="text-sm font-regular text-gray-700">Photoshoot-ready finish</span>
                     </div>
                   )}
                 </div>
@@ -115,12 +112,12 @@ export default function PricingTable() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-white rounded-elegant p-8 shadow-elegant"
+          className="bg-white rounded-elegant p-8 shadow-elegant border border-accent/20"
         >
           <h3 className="text-2xl font-medium text-primary mb-6 text-center">
             {prices[3].title}
           </h3>
-          <p className="text-center text-foreground font-light max-w-2xl mx-auto">
+          <p className="text-center text-gray-700 font-regular max-w-2xl mx-auto">
             {prices[3].desc}
           </p>
         </motion.div>

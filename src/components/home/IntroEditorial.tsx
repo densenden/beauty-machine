@@ -11,18 +11,15 @@ export default function IntroEditorial() {
   const homeContent = content.en.home
 
   return (
-    <section ref={ref} className="py-24 bg-white relative overflow-hidden">
-      {/* Elegant Frame Element */}
-      <div className="absolute top-20 right-8 w-32 h-48 border-2 border-accent/20 rounded-elegant rotate-12 hidden lg:block"></div>
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section ref={ref} className="py-24 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center"
         >
-          <p className="text-lg md:text-xl leading-relaxed font-light text-foreground tracking-wide">
+          <p className="text-lg md:text-xl leading-relaxed font-regular text-gray-800 tracking-wide">
             {homeContent.editorialText}
           </p>
         </motion.div>

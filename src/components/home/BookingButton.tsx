@@ -22,7 +22,7 @@ export default function BookingButton() {
             Ready to Transform Your Look?
           </h2>
           
-          <p className="text-xl font-light text-text-secondary mb-12 max-w-2xl mx-auto">
+          <p className="text-xl font-regular text-gray-700 mb-12 max-w-2xl mx-auto">
             Book your professional makeup session now. Choose your package, select your time, 
             and let us bring the luxury experience directly to you.
           </p>
@@ -60,15 +60,15 @@ export default function BookingButton() {
           >
             <div>
               <div className="text-2xl font-light text-accent mb-2">100%</div>
-              <div className="text-sm font-regular text-text-muted">Punctual & Professional</div>
+              <div className="text-sm font-regular text-gray-600">Punctual & Professional</div>
             </div>
             <div>
               <div className="text-2xl font-light text-accent mb-2">€89+</div>
-              <div className="text-sm font-regular text-text-muted">Starting Price</div>
+              <div className="text-sm font-regular text-gray-600">Starting Price</div>
             </div>
             <div>
               <div className="text-2xl font-light text-accent mb-2">Frankfurt</div>
-              <div className="text-sm font-regular text-text-muted">Mobile Service Area</div>
+              <div className="text-sm font-regular text-gray-600">Mobile Service Area</div>
             </div>
           </motion.div>
         </motion.div>
