@@ -48,7 +48,7 @@ export default function USPList() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="flex items-start space-x-6 p-8 bg-gray-50 rounded-elegant hover:bg-gray-100 transition-colors duration-300 group border border-primary/10"
+                className="flex items-start space-x-6 p-8 bg-gray-50 rounded-elegant hover:bg-gray-100 transition-colors duration-300 group border border-accent/30"
               >
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-accent/10 rounded-elegant flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">

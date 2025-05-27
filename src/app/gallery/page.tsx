@@ -5,18 +5,15 @@ export default function GalleryPage() {
 
   return (
     <div className="pt-16">
-      <div className="py-16 bg-gray-50 relative overflow-hidden">
-        {/* Elegant Frame Element */}
-        <div className="absolute bottom-12 left-12 w-32 h-48 border-2 border-accent/20 rounded-elegant -rotate-6 hidden lg:block"></div>
-        
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-light text-primary mb-6">
             Gallery
           </h1>
-          <p className="text-xl font-light text-foreground max-w-3xl mx-auto">
-            Discover the art of mobile beauty through our curated collection of moments, 
-            from executive boardrooms to intimate penthouse settings.
-          </p>
+                      <p className="text-xl font-regular text-gray-700 max-w-3xl mx-auto">
+              Discover the art of mobile beauty through our curated collection of moments, 
+              from executive boardrooms to intimate penthouse settings.
+            </p>
         </div>
       </div>
 
@@ -26,7 +23,7 @@ export default function GalleryPage() {
             {galleryContent.scenes.map((scene, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-elegant bg-gray-100 aspect-[4/5] hover:shadow-elegant transition-all duration-500"
+                className="group relative overflow-hidden rounded-elegant bg-gray-100 aspect-[4/5] hover:shadow-elegant transition-all duration-500 border border-accent/30"
               >
                 {/* Image Placeholder with Scene Description */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-200 via-gray-100 to-gray-50 flex items-center justify-center">
@@ -77,34 +74,34 @@ export default function GalleryPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
+            <div className="text-center p-6 bg-white rounded-elegant border border-accent/30">
               <div className="w-16 h-16 bg-accent/10 rounded-elegant flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-accent">🎨</span>
               </div>
               <h3 className="text-lg font-medium text-primary mb-3">Artistry</h3>
-              <p className="text-foreground font-light">
+              <p className="text-gray-700 font-regular">
                 Each look is meticulously crafted to enhance your natural beauty 
                 while complementing your professional environment.
               </p>
             </div>
 
-            <div className="text-center p-6">
+            <div className="text-center p-6 bg-white rounded-elegant border border-accent/30">
               <div className="w-16 h-16 bg-accent/10 rounded-elegant flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-accent">📍</span>
               </div>
               <h3 className="text-lg font-medium text-primary mb-3">Location</h3>
-              <p className="text-foreground font-light">
+              <p className="text-gray-700 font-regular">
                 From corporate headquarters to private residences, 
                 we bring our mobile studio directly to you.
               </p>
             </div>
 
-            <div className="text-center p-6">
+            <div className="text-center p-6 bg-white rounded-elegant border border-accent/30">
               <div className="w-16 h-16 bg-accent/10 rounded-elegant flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-accent">✨</span>
               </div>
               <h3 className="text-lg font-medium text-primary mb-3">Experience</h3>
-              <p className="text-foreground font-light">
+              <p className="text-gray-700 font-regular">
                 More than makeup application—it&apos;s a moment of tranquility 
                 and transformation in your busy day.
               </p>
@@ -119,7 +116,7 @@ export default function GalleryPage() {
           <h2 className="text-4xl md:text-5xl font-light text-primary mb-8">
             Ready to Create Your Moment?
           </h2>
-          <p className="text-xl font-light text-text-secondary mb-12">
+          <p className="text-xl font-regular text-gray-700 mb-12">
             Let us capture your elegance in your own environment.
           </p>
           <a

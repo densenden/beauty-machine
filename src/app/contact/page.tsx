@@ -60,7 +60,7 @@ export default function ContactPage() {
               </h2>
               
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-4 p-6 bg-white rounded-elegant border border-accent/30 shadow-sm">
                   <div className="w-12 h-12 bg-accent/10 rounded-elegant flex items-center justify-center flex-shrink-0">
                     <EnvelopeIcon className="w-6 h-6 text-accent" />
                   </div>
@@ -71,7 +71,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-4 p-6 bg-white rounded-elegant border border-accent/30 shadow-sm">
                   <div className="w-12 h-12 bg-accent/10 rounded-elegant flex items-center justify-center flex-shrink-0">
                     <PhoneIcon className="w-6 h-6 text-accent" />
                   </div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-4 p-6 bg-white rounded-elegant border border-accent/30 shadow-sm">
                   <div className="w-12 h-12 bg-accent/10 rounded-elegant flex items-center justify-center flex-shrink-0">
                     <MapPinIcon className="w-6 h-6 text-accent" />
                   </div>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="mt-12 p-6 bg-gray-50 rounded-elegant">
+              <div className="mt-12 p-6 bg-gray-50 rounded-elegant border border-accent/30">
                 <h3 className="text-lg font-medium text-primary mb-3">Business Hours</h3>
                 <div className="space-y-2 text-gray-800">
                   <div className="flex justify-between">

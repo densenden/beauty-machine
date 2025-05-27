@@ -37,8 +37,8 @@ export default function PricingTable() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`bg-white rounded-elegant p-8 shadow-elegant hover:shadow-lg transition-all duration-300 ${
-                index === 1 ? 'ring-2 ring-accent scale-105' : 'border border-primary/10'
+              className={`bg-white rounded-elegant p-8 shadow-elegant hover:shadow-lg transition-all duration-300 border border-accent/30 ${
+                index === 1 ? 'ring-2 ring-accent scale-105' : ''
               }`}
             >
               {index === 1 && (
@@ -112,7 +112,7 @@ export default function PricingTable() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-white rounded-elegant p-8 shadow-elegant border border-accent/20"
+          className="bg-white rounded-elegant p-8 shadow-elegant border border-accent/30"
         >
           <h3 className="text-2xl font-medium text-primary mb-6 text-center">
             {prices[3].title}

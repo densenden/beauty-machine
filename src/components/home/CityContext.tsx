@@ -31,7 +31,7 @@ export default function CityContext() {
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white rounded-elegant p-6 shadow-elegant hover:shadow-lg transition-all duration-300 group border border-accent/15"
+              className="bg-white rounded-elegant p-6 shadow-elegant hover:shadow-lg transition-all duration-300 group border border-accent/30"
             >
               <div className="flex items-start space-x-4">
                 <div className="w-2 h-2 bg-accent rounded-full mt-3 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
