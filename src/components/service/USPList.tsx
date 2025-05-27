@@ -24,15 +24,18 @@ export default function USPList() {
   ]
 
   return (
-    <section ref={ref} className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={ref} className="py-24 bg-white relative overflow-hidden">
+      {/* Elegant Frame Element */}
+      <div className="absolute top-16 right-16 w-24 h-36 border-2 border-primary/15 rounded-elegant rotate-12 hidden lg:block"></div>
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-thin text-primary mb-6">
+          <h2 className="text-4xl md:text-5xl font-light text-primary mb-6">
             Why Choose Beauty Machine IRL?
           </h2>
           <div className="w-24 h-0.5 bg-accent mx-auto"></div>
@@ -45,19 +48,19 @@ export default function USPList() {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="flex items-start space-x-6 p-8 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300"
+                className="flex items-start space-x-6 p-8 bg-gray-50 rounded-elegant hover:bg-gray-100 transition-colors duration-300 group"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-accent/10 rounded-elegant flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
                     <IconComponent className="w-6 h-6 text-accent" />
                   </div>
                 </div>
                 
                 <div>
-                  <p className="text-lg font-light text-gray-800 leading-relaxed">
+                  <p className="text-lg font-regular text-foreground leading-relaxed">
                     {usp}
                   </p>
                 </div>
@@ -67,8 +70,8 @@ export default function USPList() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-16"
         >
