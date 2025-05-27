@@ -1,8 +1,6 @@
-import { content } from '@/lib/content'
 import Image from 'next/image'
 
 export default function GalleryPage() {
-  const galleryContent = content.en.gallery
 
   return (
     <div className="pt-16">

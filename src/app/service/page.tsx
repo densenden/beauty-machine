@@ -1,6 +1,5 @@
 import USPList from '@/components/service/USPList'
 import ServiceShowcase from '@/components/service/ServiceShowcase'
-import PricingTable from '@/components/service/PricingTable'
 
 export default function ServicePage() {
   return (
@@ -22,7 +21,6 @@ export default function ServicePage() {
       
       <USPList />
       <ServiceShowcase />
-      <PricingTable />
     </div>
   )
 } 
