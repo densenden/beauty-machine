@@ -1,8 +1,20 @@
 import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
+import { Lexend, Lexend_Giga } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+
+const lexend = Lexend({
+  subsets: ['latin'],
+  variable: '--font-lexend',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
+
+const lexendGiga = Lexend_Giga({
+  subsets: ['latin'],
+  variable: '--font-lexend-giga',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
 
 export const metadata: Metadata = {
   title: "Beauty Machine IRL - High-end Makeup in Frankfurt",
@@ -16,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={GeistSans.variable}>
-      <body className="font-geist antialiased bg-background text-foreground">
+    <html lang="en" className={`${lexend.variable} ${lexendGiga.variable}`}>
+      <body className="font-lexend antialiased bg-background text-foreground">
         <Navigation />
         <main>
           {children}

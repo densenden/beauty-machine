@@ -1,4 +1,5 @@
 import { content } from '@/lib/content'
+import Image from 'next/image'
 
 export default function GalleryPage() {
   const galleryContent = content.en.gallery
@@ -7,55 +8,128 @@ export default function GalleryPage() {
     <div className="pt-16">
       <div className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-light text-primary mb-6">
+                    <span className="inline-block px-6 py-3 bg-accent/10 text-accent font-lexend-giga text-sm font-medium rounded-elegant border border-accent/30 mb-8">
+            Visual Stories
+          </span>
+          <h1 className="text-5xl md:text-6xl font-lexend-giga font-light text-primary mb-6">
             Gallery
           </h1>
-                      <p className="text-xl font-regular text-gray-700 max-w-3xl mx-auto">
-              Discover the art of mobile beauty through our curated collection of moments, 
-              from executive boardrooms to intimate penthouse settings.
-            </p>
+          <p className="text-xl font-lexend font-light text-gray-700 max-w-3xl mx-auto">
+            Discover the art of mobile beauty through our curated collection of moments, 
+            from executive boardrooms to intimate penthouse settings.
+          </p>
         </div>
       </div>
 
       <div className="py-24 bg-white">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {galleryContent.scenes.map((scene, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-elegant bg-gray-100 aspect-[4/5] hover:shadow-elegant transition-all duration-500 border border-accent/30"
-              >
-                {/* Image Placeholder with Scene Description */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-200 via-gray-100 to-gray-50 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 bg-accent/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                      <span className="text-2xl text-accent">📸</span>
-                    </div>
-                    <h3 className="text-lg font-medium text-primary mb-3">
-                      {scene.title}
-                    </h3>
-                    <p className="text-sm text-text-secondary mb-4">
-                      {scene.desc}
-                    </p>
-                    <div className="text-xs text-text-muted bg-white/80 backdrop-blur-sm rounded-elegant p-3 max-w-xs">
-                      <strong className="text-primary">Concept:</strong><br />
-                      {scene.prompt}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Overlay with Scene Info */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl font-light mb-2">{scene.title}</h3>
-                    <p className="text-sm text-white/90">{scene.desc}</p>
-                  </div>
-                </div>
-
-                {/* Decorative Corner */}
-                <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-accent/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          {/* Featured Gallery Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="group relative overflow-hidden rounded-elegant aspect-[4/5] border border-accent/30 hover:border-accent/60 transition-all duration-500">
+              <Image
+                src="/images/u9967959759_Close-up_of_a_makeup_artist_styling_hair_and_applyi_438638d0-d1e0-4e3f-a5da-8f9facc6d7c2.jpeg"
+                alt="Makeup artist styling hair and applying makeup"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-xl font-lexend-giga font-medium mb-2">The Process</h3>
+                <p className="text-sm font-lexend font-light opacity-90">Professional styling in action</p>
               </div>
-            ))}
+            </div>
+
+            <div className="group relative overflow-hidden rounded-elegant aspect-[4/5] border border-accent/30 hover:border-accent/60 transition-all duration-500">
+              <Image
+                src="/images/u9967959759_Makeup_artist_preparing_tools_in_a_luxury_bathroom__80d97adf-e041-41d5-bb28-4159e634f5aa.jpeg"
+                alt="Makeup artist preparing tools in luxury bathroom"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-xl font-lexend-giga font-medium mb-2">Preparation</h3>
+                <p className="text-sm font-lexend font-light opacity-90">Setting up in luxury spaces</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-elegant aspect-[4/5] border border-accent/30 hover:border-accent/60 transition-all duration-500">
+              <Image
+                src="/images/u9967959759_Stylish_60_yrs_old_businesswoman_in_a_tailored_suit_28c15854-8f18-48aa-bd0d-47d2b1642a91.jpeg"
+                alt="Stylish 60 year old businesswoman in tailored suit"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-xl font-lexend-giga font-medium mb-2">Timeless Elegance</h3>
+                <p className="text-sm font-lexend font-light opacity-90">Beauty at every age</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-elegant aspect-[4/5] border border-accent/30 hover:border-accent/60 transition-all duration-500 md:col-span-2">
+              <Image
+                src="/images/u9967959759_Cinematic_collage_layout_showing_5_seamless_frames__773599c3-6c34-4c89-a90e-0e6137dc76c2.jpeg"
+                alt="Cinematic collage of makeup sessions"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-xl font-lexend-giga font-medium mb-2">The Journey</h3>
+                <p className="text-sm font-lexend font-light opacity-90">From consultation to final touch</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-elegant aspect-[4/5] border border-accent/30 hover:border-accent/60 transition-all duration-500">
+              <Image
+                src="/images/u9967959759_Young_woman_holding_her_phone_and_smiling_at_the_ca_ac9ba743-4393-4781-84db-2c25ac1a4a53.jpeg"
+                alt="Young woman with phone smiling at camera"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-xl font-lexend-giga font-medium mb-2">Modern Beauty</h3>
+                <p className="text-sm font-lexend font-light opacity-90">Connected and confident</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Images Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="relative aspect-square rounded-elegant overflow-hidden border border-accent/30">
+              <Image
+                src="/images/u9967959759_Flatlay_of_luxury_makeup_tools_on_white_marble_feat_22363eea-cf18-42f7-9e05-38bc073a7366.jpeg"
+                alt="Luxury makeup tools flatlay"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-square rounded-elegant overflow-hidden border border-accent/30">
+              <Image
+                src="/images/u9967959759_Elegant_asian_businesswoman_inside_a_luxury_car_wit_83cc5573-96d3-43c9-817a-9d358627d996.jpeg"
+                alt="Elegant Asian businesswoman in luxury car"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-square rounded-elegant overflow-hidden border border-accent/30">
+              <Image
+                src="/images/u9967959759_Elegant_black_businesswoman_inside_a_luxury_car_wit_2ad9c55b-e5c5-42f9-98d5-d4af642f1e67.jpeg"
+                alt="Elegant Black businesswoman in luxury car"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-square rounded-elegant overflow-hidden border border-accent/30">
+              <Image
+                src="/images/u9967959759_Confident_older_businesswoman_55-65_years_old_in_a__c06ef969-1bbc-4859-880d-02b584c8b27b.jpeg"
+                alt="Confident older businesswoman"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>

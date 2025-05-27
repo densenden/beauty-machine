@@ -19,7 +19,8 @@ const config: Config = {
         'text-muted': '#6B7280', // Refined muted text
       },
       fontFamily: {
-        'geist': ['var(--font-geist)', 'system-ui', 'sans-serif'],
+        'lexend': ['var(--font-lexend)', 'system-ui', 'sans-serif'],
+        'lexend-giga': ['var(--font-lexend-giga)', 'system-ui', 'sans-serif'],
       },
       fontWeight: {
         'thin': '100',

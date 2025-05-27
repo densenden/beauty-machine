@@ -21,10 +21,13 @@ export default function PricingTable() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-light text-primary mb-6">
+          <span className="inline-block px-6 py-3 bg-accent/10 text-accent font-lexend-giga text-sm font-medium rounded-elegant border border-accent/30 mb-8">
+            Service Packages
+          </span>
+          <h2 className="text-4xl md:text-5xl font-lexend-giga font-light text-primary mb-6">
             Choose Your Package
           </h2>
-          <p className="text-xl font-regular text-gray-800 max-w-3xl mx-auto">
+          <p className="text-xl font-lexend font-light text-gray-700 max-w-3xl mx-auto">
             Professional makeup services with transparent pricing. 
             All packages include consultation and premium products.
           </p>
@@ -48,15 +51,15 @@ export default function PricingTable() {
               )}
               
               <div className="text-center">
-                <h3 className="text-2xl font-medium text-primary mb-4">
+                <h3 className="text-2xl font-lexend-giga font-medium text-primary mb-4">
                   {price.title}
                 </h3>
                 
-                <div className="text-5xl font-light text-accent mb-6">
+                <div className="text-5xl font-lexend-giga font-light text-accent mb-6">
                   {price.price}
                 </div>
                 
-                <p className="text-gray-700 font-regular mb-8">
+                <p className="text-gray-700 font-lexend font-light mb-8">
                   {price.desc}
                 </p>
 
